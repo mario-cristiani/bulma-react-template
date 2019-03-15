@@ -1,0 +1,142 @@
+<!--
+* Git Shortcuts -> https://gist.github.com/webbj74/3788509
+* Bulma Documentation -> https://bulma.io/documentation/
+* Next Tasks:
+* Make Download button actually download😊
+* Use markdown to easy style bullets in Benefits and KPI section
+* Add some high level process instructions to the right hand column
+* Throw some popup text in there under each field
+* Style the form a bit
+-->
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <title></title>
+
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+
+  <script src="index.js"></script>
+  <script src="template.js"></script>
+
+  <style>
+    .hidden {
+      display: none;
+    }
+  </style>
+</head>
+
+<body>
+
+  <section class="container is-fluid">
+    <div class="columns">
+      <div class="column">
+
+        <div class="field">
+          <label class="label">Subject</label>
+          <div class="control has-icons-right">
+            <input class="input" id="subject" type="text" placeholder="Text input">
+            <span class="icon is-small is-right">
+              <i class="fas fa-check"></i>
+            </span>
+          </div>
+          <p class="help is-success">This text will popup and hide as people enter and exit fields</p>
+        </div>
+
+        <div class="field">
+          <label class="label">Subheader</label>
+          <div class="control">
+            <input class="input" id="subheader" type="text" placeholder="Text input">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Project Details</label>
+          <div class="control">
+            <textarea class="textarea" id="project-details" placeholder="Textarea"></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Benefits</label>
+          <div class="control">
+            <textarea class="textarea" id="benefits" placeholder="Textarea"></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">KPIs</label>
+          <div class="control">
+            <textarea class="textarea" id="kpi" placeholder="Textarea"></textarea>
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">Project Manager</label>
+          <div class="control">
+            <input class="input" id="project-manager" type="text" placeholder="Text input">
+          </div>
+        </div>
+
+        <div class="field">
+          <label class="label">VIT Manager</label>
+          <div class="control">
+            <input class="input" id="vit-manager" type="text" placeholder="Text input">
+          </div>
+        </div>
+
+
+        <div class="field">
+          <label class="label">Project Team</label>
+          <div class="control">
+            <input class="input" id="project-team" type="text" placeholder="Text input">
+          </div>
+        </div>
+
+
+        <div class="field">
+          <label class="label">Business Sponsor</label>
+          <div class="control">
+            <input class="input" id="business-sponsor" type="text" placeholder="Text input">
+          </div>
+        </div>
+        <!-- <div class="field">
+        <label class="label">Subject</label>
+        <div class="control">
+          <div class="select">
+            <select>
+              <option>Select dropdown</option>
+              <option>With options</option>
+            </select>
+          </div>
+        </div>
+      </div> -->
+
+
+
+        <div class="field is-grouped">
+          <div class="control">
+            <button class="button is-link" id="submit">Submit</button>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <a class="button is-link hidden" id="download">Download Now</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="column">
+        <div id="description-text">
+          Ashish Video and Instruction goes here:)
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>
