@@ -1,5 +1,10 @@
-function buildTemplate(fieldValues) {
+/**
+ * Build Template.
+ *
+ * @param {Object} fieldValues
+ */
 
+const buildTemplate = (fieldValues) => {
   if (fieldValues !== null) {
     var templateHTML = `<!-- Subject: VIT EAS Email Template  -->
 
@@ -392,35 +397,26 @@ function buildTemplate(fieldValues) {
   </body>
 
   </html>`;
-
-    showDownloadButton(templateHTML);
+    startDownload(templateHTML);
   }
+};
 
-}
-
-const makeTemplate = (templateText) => {
-
-  if (templateText !== null) {
-    var data = new Blob([templateText], {
-      type: "text/plain"
-    });
-    var htmlFile = window.URL.createObjectURL(data);
-
-    return htmlFile;
-  }
-}
-
-const showDownloadButton = (templateText) => {
+/**
+ * Show Download Button.
+ *
+ * @param {String} templateText
+ */
+const startDownload = (templateText) => {
   const downloadButton = document.getElementById('download');
   const submitButton = document.getElementById('submit');
-
   if (downloadButton !== null && submitButton !== null) {
-    downloadButton.href = makeTemplate(templateText);
-
-    downloadButton.classList.remove('hidden');
-    submitButton.classList.add('hidden');
+    downloadButton.setAttribute(
+      'href',
+      'data:text/html;charset=utf-8,' + encodeURIComponent(templateText)
+    );
+    downloadButton.setAttribute('download', 'email-template.html');
+    downloadButton.click();
+    // downloadButton.classList.remove('hidden');
+    // submitButton.classList.add('hidden');
   }
-
-
-
-}
+};

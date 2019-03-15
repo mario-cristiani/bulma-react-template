@@ -1,11 +1,12 @@
 <!--
 * Git Shortcuts -> https://gist.github.com/webbj74/3788509
 * Bulma Documentation -> https://bulma.io/documentation/
-* Next Tasks:
-* Make Download button actually download😊
+*
+Next Tasks:
 * Use markdown to easy style bullets in Benefits and KPI section
+* Use markdown to easy style paragraph spacing within details textarea
 * Add some high level process instructions to the right hand column
-* Throw some popup text in there under each field
+* Throw some popup text in there under each field. Use onFocus to show/hide as we move through fields
 * Style the form a bit
 -->
 
@@ -26,10 +27,31 @@
     .hidden {
       display: none;
     }
+
+    .description-text {
+      padding-bottom: 20px;
+    }
+
+    .container {
+      padding: 10px;
+    }
   </style>
 </head>
 
 <body>
+
+  <section class="hero is-info">
+    <div class="hero-body">
+      <div class="container">
+        <h1 class="title">
+          VIT EAS Project Email Generator
+        </h1>
+        <h2 class="subtitle">
+          Follow these steps to get a great looking email for your project
+        </h2>
+      </div>
+    </div>
+  </section>
 
   <section class="container is-fluid">
     <div class="columns">
@@ -131,8 +153,13 @@
 
       </div>
       <div class="column">
-        <div id="description-text">
+        <div class="description-text">
           Ashish Video and Instruction goes here:)
+        </div>
+        <div class="description-text">
+          This form can be used to generate project emails in the standard VIT EAS Template. Instructions for each field will become visible as you click on the input box for that field.
+
+          Once you have entered all your form data you can...
         </div>
       </div>
     </div>
