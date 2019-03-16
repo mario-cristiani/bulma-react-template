@@ -3,6 +3,8 @@
 * Bulma Documentation -> https://bulma.io/documentation/
 *
 Next Tasks:
+* include zipfile with images
+* update pics to be jpg and placeholder text inside template to identify pictures for each location
 * Use markdown to easy style bullets in Benefits and KPI section
 * Use markdown to easy style paragraph spacing within details textarea
 * Add some high level process instructions to the right hand column
@@ -33,16 +35,32 @@ Next Tasks:
     }
 
     .container {
-      padding: 10px;
+      /* padding: 10px; */
+      margin: 20px;
+    }
+
+    .column-decoration {
+      background-color: #c6f0ff;
+      border-radius: 10px;
+      margin-left: 30px;
+    }
+
+    .column-gradient {
+      background-image: linear-gradient(#fff, #d8d8d6);
+      border-radius: 10px;
+    }
+
+    .description-text {
+      max-width: 1000px;
     }
   </style>
 </head>
 
 <body>
 
-  <section class="hero is-info">
+  <section class="hero is-black">
     <div class="hero-body">
-      <div class="container">
+      <div class="container is fluid">
         <h1 class="title">
           VIT EAS Project Email Generator
         </h1>
@@ -55,7 +73,7 @@ Next Tasks:
 
   <section class="container is-fluid">
     <div class="columns">
-      <div class="column">
+      <div class="column column-gradient">
 
         <div class="field">
           <label class="label">Subject</label>
@@ -137,29 +155,27 @@ Next Tasks:
         </div>
       </div> -->
 
-
-
         <div class="field is-grouped">
           <div class="control">
-            <button class="button is-link" id="submit">Submit</button>
-          </div>
-        </div>
-
-        <div class="field is-grouped">
-          <div class="control">
-            <a class="button is-link hidden" id="download">Download Now</a>
+            <button class="button is-link" id="submit">Get Some</button>
           </div>
         </div>
 
       </div>
-      <div class="column">
+      <div class="column column-decoration">
         <div class="description-text">
           Ashish Video and Instruction goes here:)
         </div>
         <div class="description-text">
-          This form can be used to generate project emails in the standard VIT EAS Template. Instructions for each field will become visible as you click on the input box for that field.
+          Lorem ipsum dolor amet snackwave gentrify flannel mixtape microdosing ennui. Umami celiac small batch, brunch selvage taiyaki affogato tote bag marfa yuccie gentrify waistcoat sriracha iceland vaporware. VHS freegan celiac lyft, succulents
+          lomo bicycle rights subway tile cornhole venmo enamel pin twee. Shoreditch sustainable squid kombucha raclette tattooed retro shaman shabby chic trust fund. Enamel pin etsy banh mi 3 wolf moon. Squid iceland echo park vice cray fixie.
 
-          Once you have entered all your form data you can...
+          Butcher waistcoat vexillologist messenger bag, narwhal williamsburg af kogi seitan hashtag raw denim etsy. Try-hard letterpress selfies adaptogen before they sold out microdosing schlitz etsy shaman. Hammock man bun organic unicorn ugh pok
+          pok, poutine kitsch 90's shoreditch hot chicken. Helvetica dreamcatcher live-edge kinfolk quinoa woke humblebrag vice hammock swag. Helvetica master cleanse adaptogen, hexagon waistcoat health goth sartorial green juice messenger bag
+          dreamcatcher truffaut. Skateboard stumptown knausgaard, umami lumbersexual sustainable PBR&B vinyl schlitz gochujang you probably haven't heard of them banh mi master cleanse pour-over.
+
+          Irony woke whatever edison bulb gluten-free art party taxidermy mustache chambray food truck deep v retro hammock. You probably haven't heard of them selvage cloud bread narwhal. Dreamcatcher flexitarian mustache cold-pressed tofu.
+          Flexitarian chicharrones PBR&B, wolf lo-fi plaid everyday carry kogi. Photo booth DIY occupy aesthetic.
         </div>
       </div>
     </div>
