@@ -36,22 +36,36 @@ Next Tasks:
 
     .container {
       /* padding: 10px; */
-      margin: 20px;
+      margin: 0px;
     }
 
     .column-decoration {
       background-color: #c6f0ff;
       border-radius: 10px;
       margin-left: 30px;
+      margin-top: 20px;
     }
 
     .column-gradient {
       background-image: linear-gradient(#fff, #d8d8d6);
       border-radius: 10px;
+      margin-top: 20px;
     }
 
     .description-text {
       max-width: 1000px;
+    }
+
+    .headerdesign {
+      display: inline-block;
+    }
+
+    .vertical-center {
+      margin: 0;
+      position: absolute;
+      top: 50%;
+      -ms-transform: translateY(-50%);
+      transform: translateY(-50%);
     }
   </style>
 </head>
@@ -61,12 +75,16 @@ Next Tasks:
   <section class="hero is-black">
     <div class="hero-body">
       <div class="container is fluid">
-        <h1 class="title">
-          VIT EAS Project Email Generator
-        </h1>
-        <h2 class="subtitle">
-          Follow these steps to get a great looking email for your project
-        </h2>
+        <div class="headerdesign">
+          <figure class="image is-96x96">
+            <img class="is-rounded" src="https://vmsnet.varian.com/corporateservices/VIT/PublishingImages/mobile-ready/eas-banner-circle.jpg">
+          </figure>
+        </div>
+        <div class="headerdesign vertical-center">
+          <h1 class="title">
+            Project Email Generator
+          </h1>
+        </div>
       </div>
     </div>
   </section>
@@ -158,6 +176,12 @@ Next Tasks:
         <div class="field is-grouped">
           <div class="control">
             <button class="button is-link" id="submit">Get Some</button>
+          </div>
+        </div>
+
+        <div class="field is-grouped">
+          <div class="control">
+            <a class="button is-link hidden" id="download">Download Now</a>
           </div>
         </div>
 
