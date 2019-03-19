@@ -245,18 +245,18 @@ const buildTemplate = (fieldValues) => {
     <center style="width: 100%; background: #ffffff; text-align: left; padding-top: 5px;">
 
       <!-- Visually Hidden Preheader Text : BEGIN -->
-      <!-- Subject: 💳 New Cumulus Vendor Payment Request Form  -->
       <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
         ${fieldValues.subheader};
       </div>
 
+      <!-- This forces blank space after the carefully crafted subheader -->
       <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
         &nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;
       </div>
       <!-- Visually Hidden Preheader Text : END -->
 
       <!-- Full Bleed Email Header Section : BEGIN -->
-      <table role="presentation" bgcolor="#000000" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
+      <table role="presentation" bgcolor="#3A4B57" cellspacing="0" cellpadding="0" border="0" align="center" width="100%">
         <tr>
           <td valign="top" align="center">
             <div style="max-width: 1000px; margin: auto;" class="email-container">
@@ -265,14 +265,13 @@ const buildTemplate = (fieldValues) => {
                         <tr>
                         <td>
                         <![endif]-->
-              <!-- TODO :: Hide Table and set border-bottom: none above when showing as webpage. Unhide Table for Email version. -->
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                 <tr>
-                  <td style="text-align: left; padding-left: 10px; height: 100px;">
-                    AA
+                  <td style="text-align: left; color: white; padding-left: 10px; height: 100px;">
+                    [Insert varian-logo-110px]
                   </td>
-                  <td style="text-align: right; padding-right: 20px; height: 100px;">
-                    BB
+                  <td style="text-align: right; color: white; padding-right: 20px; height: 100px;">
+                    [Insert varian-ellipses-80px]
                   </td>
                 </tr>
               </table>
@@ -291,13 +290,8 @@ const buildTemplate = (fieldValues) => {
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="1000" style="margin: auto;" class="email-container">
         <tr>
           <td bgcolor="#ffffff" align="center" style="padding-top: 20px;">
-            AA
+            [Insert eas-banner-1000px]
           </td>
-        <tr>
-          <td bgcolor="#ffffff" align="right" style="font-family: sans-serif; font-size: 15px; line-height: 20px;">
-            On Mobile? Use this link for a better experience.
-          </td>
-        </tr>
         </tr>
 
         <!-- Thumbnail Right, Text Left : BEGIN -->
@@ -309,14 +303,14 @@ const buildTemplate = (fieldValues) => {
                 <td width="33.33%" class="stack-column-center">
                   <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tr>
-                      <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px;  padding: 0 10px; border-top: 5px solid #682E86;">
+                      <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px;  padding: 0 10px 30px; border-top: 5px solid #682E86;">
                         <ul class="check">
                           ${fieldValues.benefits}
                         </ul>
                       </td>
                     </tr>
                     <tr>
-                      <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; padding: 0 10px; border-top: 5px solid #FFBC3E;">
+                      <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; padding: 0 10px 30px; border-top: 5px solid #FFBC3E;">
                         <ul class="pin">
                           ${fieldValues.kpi}
                         </ul>
@@ -325,6 +319,7 @@ const buildTemplate = (fieldValues) => {
                   </table>
                 </td>
                 <!-- Column : END -->
+
                 <!-- Column : BEGIN -->
                 <td width="66.66%" class="stack-column-center">
                   <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
@@ -332,7 +327,7 @@ const buildTemplate = (fieldValues) => {
                       <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px; text-align: left;" class="center-on-narrow">
                         <p style="padding: 5; text-align: left;">${fieldValues['project-details']}</p>
 
-                        <p style="padding: 5; text-align: left;">[Optional - Insert image here or delete.]
+                        <p style="padding: 5; text-align: left;">[Optional - Insert image here or delete.]</p>
                       </td>
                     </tr>
                   </table>
@@ -353,10 +348,10 @@ const buildTemplate = (fieldValues) => {
         <!-- Clear Spacer : END -->
 
         <tr>
-          <td bgcolor="#ffffff" style="padding: 20px 40px 10px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: center;">
+          <td bgcolor="#ffffff" style="padding: 20px 20px 10px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: center;">
             <p style="padding: 5; text-align: left;">[Additional long form paragraph optional]</p>
 
-            <p style="padding: 5; text-align: left;"><span style="color:#00A8E1; font-weight:bold;">Project Manager:</span> ${fieldValues['project-manager']} | <span style="color:#00A8E1; font-weight:bold;">VIT Manager:</span> ${fieldValues['vit-manager']} | Project Team: ${fieldValues['project-team']} | <span style="color:#00A8E1; font-weight:bold;">Business Sponsors:</span> ${fieldValues['business-sponsor']}</p>
+            <p style="padding: 5; text-align: left;"><span style="color:#00A8E1; font-weight:bold;">Project Manager:</span> ${fieldValues['project-manager']} <span style="color:#00A8E1; font-weight:bold;">VIT Manager:</span> ${fieldValues['vit-manager']} <span style="color:#00A8E1; font-weight:bold;">Project Team:</span> ${fieldValues['project-team']} <span style="color:#00A8E1; font-weight:bold;">Business Sponsors:</span> ${fieldValues['business-sponsor']}</p>
           </td>
         </tr>
       </table>
@@ -374,10 +369,10 @@ const buildTemplate = (fieldValues) => {
                       <![endif]-->
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                 <tr>
-                  <td style="text-align: center; height: 100px; font-family: sans-serif; font-size: 20px; line-height: 24px;">
+                  <td style="text-align: center; height: 100px; font-family: sans-serif; font-size: 20px; line-height: 30px;">
                     Technology
                     &nbsp;
-                    BB
+                    <span style="font-size: 16px;">[Insert varian-amp-24px]</span>
                     &nbsp;
                     People
                   </td>
@@ -406,6 +401,7 @@ const buildTemplate = (fieldValues) => {
  *
  * @param {String} templateText
  */
+
 const startDownload = (templateText) => {
   const downloadButton = document.getElementById('download');
   const submitButton = document.getElementById('submit');

@@ -3,7 +3,9 @@
 * Bulma Documentation -> https://bulma.io/documentation/
 *
 Next Tasks:
-* include zipfile with images
+* remove if logic on template.js for download button that does not exist
+* confirm use of @param {Object} fieldValues and const allFieldValues = {};
+* include zipfile with images - wip
 * update pics to be jpg and placeholder text inside template to identify pictures for each location
 * Use markdown to easy style bullets in Benefits and KPI section
 * Use markdown to easy style paragraph spacing within details textarea
@@ -72,12 +74,26 @@ Next Tasks:
 
 <body>
 
+  <div class="modal is-active">
+    <div class="modal-background"></div>
+    <div class="modal-card">
+      <header class="modal-card-head">
+        <p class="modal-card-title">All Done</p> <button class="delete" aria-label="close"></button>
+      </header>
+      <section class="modal-card-body">
+        <p>Good Job. Just make sure to include <strong>vit-eas-projects@sp13.varian.com</strong> in the bcc field!</p>
+      </section>
+      <footer class="modal-card-foot">
+      </footer>
+    </div>
+  </div>
+
   <section class="hero is-black">
     <div class="hero-body">
       <div class="container is fluid">
         <div class="headerdesign">
           <figure class="image is-96x96">
-            <img class="is-rounded" src="https://vmsnet.varian.com/corporateservices/VIT/PublishingImages/mobile-ready/eas-banner-circle.jpg">
+            <img class="is-rounded" src="https://vmsappsdev.varian.com/vit-email-template/eas-banner-circle.jpg">
           </figure>
         </div>
         <div class="headerdesign vertical-center">
@@ -95,113 +111,124 @@ Next Tasks:
 
         <div class="field">
           <label class="label">Subject</label>
-          <div class="control has-icons-right">
-            <input class="input" id="subject" type="text" placeholder="Text input">
-            <span class="icon is-small is-right">
-              <i class="fas fa-check"></i>
-            </span>
+          <div class="control">
+            <input class="input" id="subject" type="text" placeholder="Add a catchy subject">
           </div>
           <p class="help is-success">This text will popup and hide as people enter and exit fields</p>
         </div>
 
         <div class="field">
           <label class="label">Subheader</label>
-          <div class="control">
-            <input class="input" id="subheader" type="text" placeholder="Text input">
+          <div class="control has-icons-left">
+            <span class="icon is-small is-left">
+              <i class="fas fa-exclamation-triangle"></i>
+            </span>
+            <input class="input" id="subheader" type="text" placeholder="Think of an important sentence just for the outlook inbox">
           </div>
         </div>
 
         <div class="field">
           <label class="label">Project Details</label>
           <div class="control">
-            <textarea class="textarea" id="project-details" placeholder="Textarea"></textarea>
+            <textarea class="textarea" id="project-details" placeholder="Tell a story" rows="15"></textarea>
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Benefits</label>
+          <label class="label">Benefits/Key Points</label>
           <div class="control">
-            <textarea class="textarea" id="benefits" placeholder="Textarea"></textarea>
+            <textarea class="textarea" id="benefits" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
           </div>
         </div>
 
         <div class="field">
-          <label class="label">KPIs</label>
+          <label class="label">KPIs/Benefits</label>
           <div class="control">
-            <textarea class="textarea" id="kpi" placeholder="Textarea"></textarea>
+            <textarea class="textarea" id="kpi" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
           </div>
         </div>
 
         <div class="field">
           <label class="label">Project Manager</label>
-          <div class="control">
-            <input class="input" id="project-manager" type="text" placeholder="Text input">
+          <div class="control has-icons-left">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user-circle"></i>
+            </span>
+            <input class="input" id="project-manager" type="text" placeholder="Give a shout out to the Manager">
           </div>
         </div>
 
         <div class="field">
           <label class="label">VIT Manager</label>
-          <div class="control">
-            <input class="input" id="vit-manager" type="text" placeholder="Text input">
+          <div class="control has-icons-left">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user-circle"></i>
+            </span>
+            <input class="input" id="vit-manager" type="text" placeholder="Don't forget VIT...">
           </div>
         </div>
 
 
         <div class="field">
           <label class="label">Project Team</label>
-          <div class="control">
-            <input class="input" id="project-team" type="text" placeholder="Text input">
+          <div class="control has-icons-left">
+            <span class="icon is-small is-left">
+              <i class="fas fa-users"></i>
+            </span>
+            <input class="input" id="project-team" type="text" placeholder="Thank your team members">
           </div>
         </div>
 
 
         <div class="field">
           <label class="label">Business Sponsor</label>
-          <div class="control">
-            <input class="input" id="business-sponsor" type="text" placeholder="Text input">
+          <div class="control has-icons-left">
+            <span class="icon is-small is-left">
+              <i class="fas fa-user-circle"></i>
+            </span>
+            <input class="input" id="business-sponsor" type="text" placeholder="Include the business sponsor(s)">
           </div>
         </div>
-        <!-- <div class="field">
-        <label class="label">Subject</label>
-        <div class="control">
-          <div class="select">
-            <select>
-              <option>Select dropdown</option>
-              <option>With options</option>
-            </select>
-          </div>
-        </div>
-      </div> -->
 
         <div class="field is-grouped">
           <div class="control">
             <button class="button is-link" id="submit">Get Some</button>
           </div>
-        </div>
-
-        <div class="field is-grouped">
           <div class="control">
             <a class="button is-link hidden" id="download">Download Now</a>
           </div>
+          <div class="control">
+            <a href="https://vmsappsdev.varian.com/vit-email-template/vit-template-images.zip" download="vit_template_images.zip">Download Images</a>
+          </div>
         </div>
-
       </div>
+
       <div class="column column-decoration">
         <div class="description-text">
-          Ashish Video and Instruction goes here:)
+          <p>Hello. You can use this email creation tool to help promote your project.</p>
+
+          <p>While we can help you apply the VIT EAS style and get it loaded into our project repository, we can't write the email for you. So, before you get started, take some time to think about what the project means for the end user community
+            and build a short story that is relevant.
+            <br /><br />
+            Here are some questions you can try to answer:</p>
+
+          <ul>
+            <li>Is this project part of a larger program of strategic initiative.</li>
+            <li>What was the current process that was being used? Is this brand new or an enhancement?</li>
+            <li> Are there follow on projects that will continue</li>
+          </ul>
+
+          <p>To get started watch the short videos below. In a nut shell, you need to: assemble the content, input it into the email generator, import the email template and images into an outlook email, test and send. </p>
         </div>
-        <div class="description-text">
-          Lorem ipsum dolor amet snackwave gentrify flannel mixtape microdosing ennui. Umami celiac small batch, brunch selvage taiyaki affogato tote bag marfa yuccie gentrify waistcoat sriracha iceland vaporware. VHS freegan celiac lyft, succulents
-          lomo bicycle rights subway tile cornhole venmo enamel pin twee. Shoreditch sustainable squid kombucha raclette tattooed retro shaman shabby chic trust fund. Enamel pin etsy banh mi 3 wolf moon. Squid iceland echo park vice cray fixie.
-
-          Butcher waistcoat vexillologist messenger bag, narwhal williamsburg af kogi seitan hashtag raw denim etsy. Try-hard letterpress selfies adaptogen before they sold out microdosing schlitz etsy shaman. Hammock man bun organic unicorn ugh pok
-          pok, poutine kitsch 90's shoreditch hot chicken. Helvetica dreamcatcher live-edge kinfolk quinoa woke humblebrag vice hammock swag. Helvetica master cleanse adaptogen, hexagon waistcoat health goth sartorial green juice messenger bag
-          dreamcatcher truffaut. Skateboard stumptown knausgaard, umami lumbersexual sustainable PBR&B vinyl schlitz gochujang you probably haven't heard of them banh mi master cleanse pour-over.
-
-          Irony woke whatever edison bulb gluten-free art party taxidermy mustache chambray food truck deep v retro hammock. You probably haven't heard of them selvage cloud bread narwhal. Dreamcatcher flexitarian mustache cold-pressed tofu.
-          Flexitarian chicharrones PBR&B, wolf lo-fi plaid everyday carry kogi. Photo booth DIY occupy aesthetic.
+        <div>
+          <div style='max-width: 1280px'>
+            <div style='position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;'><iframe width="1280" height="720"
+                src="https://web.microsoftstream.com/embed/video/ca2cc5fe-9083-477f-bc5f-8492d3586844?autoplay=true&amp;showinfo=false" style="border:none;" allowfullscreen
+                style='position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;'></iframe></div>
+          </div>
         </div>
       </div>
+
     </div>
   </section>
 </body>
