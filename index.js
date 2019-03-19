@@ -18,6 +18,8 @@ document.addEventListener("DOMContentLoaded", function() {
     if (submitButton !== null) {
       submitButton.addEventListener("click", function() {
         checkFields();
+
+        document.getElementById("closing-message").className = "modal is-active";
       });
     }
   };

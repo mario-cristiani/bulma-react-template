@@ -4,9 +4,7 @@
 *
 Next Tasks:
 * remove if logic on template.js for download button that does not exist
-* confirm use of @param {Object} fieldValues and const allFieldValues = {};
-* include zipfile with images - wip
-* update pics to be jpg and placeholder text inside template to identify pictures for each location
+* add javascript to close modal popup class = delete
 * Use markdown to easy style bullets in Benefits and KPI section
 * Use markdown to easy style paragraph spacing within details textarea
 * Add some high level process instructions to the right hand column
@@ -74,14 +72,14 @@ Next Tasks:
 
 <body>
 
-  <div class="modal is-active">
+  <div id="closing-message" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">All Done</p> <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <p>Good Job. Just make sure to include <strong>vit-eas-projects@sp13.varian.com</strong> in the bcc field!</p>
+        <p>Good Job. Dont forget to include <strong>vit-eas-projects@sp13.varian.com</strong> in the bcc field!</p>
       </section>
       <footer class="modal-card-foot">
       </footer>
