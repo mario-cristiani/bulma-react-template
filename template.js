@@ -412,7 +412,5 @@ const startDownload = (templateText) => {
     );
     downloadButton.setAttribute('download', 'email-template.html');
     downloadButton.click();
-    // downloadButton.classList.remove('hidden');
-    // submitButton.classList.add('hidden');
   }
 };

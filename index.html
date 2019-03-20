@@ -4,11 +4,12 @@
 *
 Next Tasks:
 * remove if logic on template.js for download button that does not exist
-* add javascript to close modal popup class = delete
+* Add javascript to close modal popup 'class = delete' as well as show/hide the individual help elements.
 * Use markdown to easy style bullets in Benefits and KPI section
 * Use markdown to easy style paragraph spacing within details textarea
 * Add some high level process instructions to the right hand column
-* Throw some popup text in there under each field. Use onFocus to show/hide as we move through fields
+* Throw some popup text in there under each field. Do we use something like onFocus to show/hide as we move through fields
+* // downloadButton.classList.remove('hidden');  // submitButton.classList.add('hidden');
 * Style the form a bit
 -->
 
@@ -26,6 +27,10 @@ Next Tasks:
   <script src="template.js"></script>
 
   <style>
+    body {
+      padding-bottom: 50px;
+    }
+
     .hidden {
       display: none;
     }
@@ -54,6 +59,14 @@ Next Tasks:
 
     .description-text {
       max-width: 1000px;
+    }
+
+    .description-text p {
+      padding-bottom: 20px;
+    }
+
+    li {
+      margin-left: 20px;
     }
 
     .headerdesign {
@@ -110,9 +123,8 @@ Next Tasks:
         <div class="field">
           <label class="label">Subject</label>
           <div class="control">
-            <input class="input" id="subject" type="text" placeholder="Add a catchy subject">
+            <input class="input" id="subject" type="text" placeholder="Type the Subject directly into the email itself " disabled>
           </div>
-          <p class="help is-success">This text will popup and hide as people enter and exit fields</p>
         </div>
 
         <div class="field">
@@ -123,17 +135,19 @@ Next Tasks:
             </span>
             <input class="input" id="subheader" type="text" placeholder="Think of an important sentence just for the outlook inbox">
           </div>
+          <p class="help is-success">We treat the subheader text with extra importance. It is hidden within your email and will only show up in the outlook inbox. We also force a lot of white space to ensure what you type here is the only thing that
+            shows.</p>
         </div>
 
         <div class="field">
           <label class="label">Project Details</label>
           <div class="control">
-            <textarea class="textarea" id="project-details" placeholder="Tell a story" rows="15"></textarea>
+            <textarea class="textarea" id="project-details" placeholder="Tell a story that includes: project overview, context for the business user, business capabilities and any issues to be resolved." rows="15"></textarea>
           </div>
         </div>
 
         <div class="field">
-          <label class="label">Benefits/Key Points</label>
+          <label class="label">Key Business Capabilities</label>
           <div class="control">
             <textarea class="textarea" id="benefits" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
           </div>
@@ -203,27 +217,50 @@ Next Tasks:
 
       <div class="column column-decoration">
         <div class="description-text">
-          <p>Hello. You can use this email creation tool to help promote your project.</p>
+          <p><span style="font-size: 24px; font-weight: bold;">W</span>elcome, to the “EAS Project Email Generator”. We hope it helps you communicate your project story to the business community. To jump start, follow the path below. </p>
 
-          <p>While we can help you apply the VIT EAS style and get it loaded into our project repository, we can't write the email for you. So, before you get started, take some time to think about what the project means for the end user community
-            and build a short story that is relevant.
-            <br /><br />
-            Here are some questions you can try to answer:</p>
+          <figure class="image is-3by1">
+            <img src="https://vmsappsdev.varian.com/vit-email-template/process-steps.png">
+          </figure>
 
-          <ul>
-            <li>Is this project part of a larger program of strategic initiative.</li>
-            <li>What was the current process that was being used? Is this brand new or an enhancement?</li>
-            <li> Are there follow on projects that will continue</li>
-          </ul>
+          <p><span style="font-size: 20px; font-weight: bold;">#1</span> Take a few minutes to think about what the project means in the eyes of the business and our users. Then create a simple story with the “Five
+            Ws (Who, What, When, Where, Why) and How” in mind. Here are some hints:</p>
+          <ol>
+            <li>Is this project part of a larger program of strategic initiative?</li>
+            <li>What are the pain points to be resolved?</li>
+            <li>What is next? </li>
+          </ol>
+          <br /><br />
 
-          <p>To get started watch the short videos below. In a nut shell, you need to: assemble the content, input it into the email generator, import the email template and images into an outlook email, test and send. </p>
-        </div>
-        <div>
-          <div style='max-width: 1280px'>
-            <div style='position: relative; padding-bottom: 56.25%; height: 0; overflow: hidden;'><iframe width="1280" height="720"
-                src="https://web.microsoftstream.com/embed/video/ca2cc5fe-9083-477f-bc5f-8492d3586844?autoplay=true&amp;showinfo=false" style="border:none;" allowfullscreen
-                style='position: absolute; top: 0; left: 0; right: 0; bottom: 0; height: 100%; max-width: 100%;'></iframe></div>
-          </div>
+          <p><span style="font-size: 20px; font-weight: bold;">#2</span> Generating the template is easy.</p>
+
+          <p> Just follow the instructions below each input field. Note that the Details, Key Business Capabilities, and KPI/Benefits fields can interpret markdown so that you can style the text you are importing.
+
+
+            <p>When ready click the Get Some button. While there, you can download a zip file that
+              contains all the template images.[Insert Graphic Here]</p>
+
+            <!-- TODO :: Can't get this to scale right with bulma classes.
+             <figure class="image is-3by1" style="max-width: 265px;">
+              <img src="https://vmsappsdev.varian.com/vit-email-template/template-buttons.png">
+            </figure> -->
+
+            <p><span style="font-size: 20px; font-weight: bold;">#3</span> If this is your first time inserting HTML into an email, you will probably need to add a button to the quick access bar in Outlook. [Insert images with more instructions here]
+            </p>
+
+            <p>Open a new email and click the Attach File Button. Navigate to the HTML file and then make sure to click the dropdown arrow and select Insert as Text option. [Insert images here]
+            </p>
+
+            <p>To insert images click on the text in the header, title area and footer one at a time. Then click the insert menu and Pictures. Choose the image, with the same name as the test you highlighted. [Insert images here]
+              <br /><br />
+              Why are we doing this? By inserting the iamges manually, we ensure that people will not get an empty boxes where pictures were not downloaded from a server.
+            </p>
+
+            <P> With the HTML and images incorporated, you are almost done. Double check your message formatting. Most likely you can improve the symmetry of the message with a few empty rows. As well, make sure to delete the [optional text] elements
+              if they were unused.</p>
+
+
+            <p><span style="font-size: 20px; font-weight: bold;">#4</span> Instructions are wip. Good Job! Now that you are ready to send, make sure to include <strong>vit-eas-projects@sp13.varian.com</strong> in the bcc field!</p>
         </div>
       </div>
 
