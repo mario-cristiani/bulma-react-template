@@ -3,7 +3,7 @@
 * Bulma Documentation -> https://bulma.io/documentation/
 *
 Next Tasks:
-* Add javascript to close modal popup 'class = delete' as well as show/hide the individual help elements.
+*  as well as show/hide the individual help elements.
 * width of instructions column when using panels
 * Use markdown to easy style bullets in Benefits and KPI section
 * Use markdown to easy style paragraph spacing within details textarea
@@ -22,6 +22,7 @@ Next Tasks:
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
   <script src="index.js"></script>
   <script src="template.js"></script>
 
@@ -87,11 +88,11 @@ Next Tasks:
 
 <body>
   <div id="closing-message" class="modal">
-    <div class="modal-background"></div>
+    <div class="modal-background" id="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
         <p class="modal-card-title">All Done</p>
-        <button class="delete" aria-label="close"></button>
+        <button class="delete" id="modal-close" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
         <p>
@@ -137,13 +138,13 @@ Next Tasks:
               <i class="fas fa-exclamation-triangle"></i>
             </span>
             <input class="input" id="subheader" type="text" placeholder="Think of an important sentence just for the outlook inbox" />
+            <p class="help is-success is-hidden">
+              We treat the subheader text with extra importance. It is hidden
+              within your email and will only show up in the outlook inbox. We
+              also force a lot of white space to ensure what you type here is
+              the only thing that shows.
+            </p>
           </div>
-          <p class="help is-success">
-            We treat the subheader text with extra importance. It is hidden
-            within your email and will only show up in the outlook inbox. We
-            also force a lot of white space to ensure what you type here is
-            the only thing that shows.
-          </p>
         </div>
 
         <div class="field">
@@ -230,35 +231,33 @@ Next Tasks:
 
           <div class="hero-foot">
             <!-- is-boxed is-fullwidth is-large -->
-            <nav class="tabs is-centered is-large">
-              <div class="container">
-                <ul>
-                  <li class="tab is-active" onclick="openTab(event,'step1')"><a>
-                      <figure class="image is-128x128">
-                        <img src="https://0400a64.netsolhost.com/samples/step1.png">
-                      </figure>
-                    </a></li>
-                  <li class="tab" onclick="openTab(event,'step2')"><a>
-                      <figure class="image is-128x128">
-                        <img src="https://0400a64.netsolhost.com/samples/step2.png">
-                      </figure>
-                    </a></li>
-                  <li class="tab" onclick="openTab(event,'step3')"><a>
-                      <figure class="image is-128x128">
-                        <img src="https://0400a64.netsolhost.com/samples/step3.png">
-                      </figure>
-                    </a></li>
-                  <li class="tab" onclick="openTab(event,'step4')"><a>
-                      <figure class="image is-128x128">
-                        <img src="https://0400a64.netsolhost.com/samples/step4.png">
-                      </figure>
-                    </a></li>
-                </ul>
-              </div>
+            <nav class="tabs is-centered is-small">
+              <ul>
+                <li class="tab is-active" onclick="openTab(event,'step1')"><a>
+                    <figure class="image is-96x96">
+                      <img src="https://0400a64.netsolhost.com/samples/step1.png">
+                    </figure>
+                  </a></li>
+                <li class="tab" onclick="openTab(event,'step2')"><a>
+                    <figure class="image is-96x96">
+                      <img src="https://0400a64.netsolhost.com/samples/step2.png">
+                    </figure>
+                  </a></li>
+                <li class="tab" onclick="openTab(event,'step3')"><a>
+                    <figure class="image is-96x96">
+                      <img src="https://0400a64.netsolhost.com/samples/step3.png">
+                    </figure>
+                  </a></li>
+                <li class="tab" onclick="openTab(event,'step4')"><a>
+                    <figure class="image is-96x96">
+                      <img src="https://0400a64.netsolhost.com/samples/step4.png">
+                    </figure>
+                  </a></li>
+              </ul>
             </nav>
           </div>
 
-          <div class="container section description-text">
+          <div class="section description-text">
             <div id="step1" class="content-tab">
               <p><span style="font-size: 20px; font-weight: bold;">#1</span> Take a few minutes to think about what the project means in the eyes of the business and our users. Then create a simple story with the “Five
                 Ws (Who, What, When, Where, Why) and How” in mind. Here are some hints:</p>
@@ -309,23 +308,6 @@ Next Tasks:
 
     </div>
   </section>
-
-  <!-- T0DO :: Move this into index.js; I wasn't sure if it goes inside the event listener or not -->
-  <script>
-    function openTab(evt, tabName) {
-      var i, x, tablinks;
-      x = document.getElementsByClassName("content-tab");
-      for (i = 0; i < x.length; i++) {
-        x[i].style.display = "none";
-      }
-      tablinks = document.getElementsByClassName("tab");
-      for (i = 0; i < x.length; i++) {
-        tablinks[i].className = tablinks[i].className.replace(" is-active", "");
-      }
-      document.getElementById(tabName).style.display = "block";
-      evt.currentTarget.className += " is-active";
-    }
-  </script>
 
 
 </body>
