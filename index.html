@@ -21,12 +21,15 @@ Next Tasks:
 
   <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
   <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
+  <link href="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.css" type="text/css" rel="stylesheet" />
 
   <!-- http://showdownjs.com/ -->
   <!-- Markdown cheatsheet -> https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/showdown/1.9.0/showdown.min.js"></script>
   <script src="index.js"></script>
   <script src="template.js"></script>
+  <script src="//code.jquery.com/jquery-latest.js"></script>
+  <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
   <style>
     body {
@@ -72,6 +75,10 @@ Next Tasks:
 
     .content-tab p {
       padding-bottom: 0px
+    }
+
+    .bottom-spacing {
+      padding-bottom: 20px;
     }
 
     .content-tab img {
@@ -121,7 +128,7 @@ Next Tasks:
       <div class="container">
         <div class="headerdesign">
           <figure class="image is-96x96">
-            <img class="is-rounded" src="https://vmsappsdev.varian.com/vit-email-template/eas-banner-circle.jpg" />
+            <img class="is-rounded" src="https://vmsappsdev.varian.com/vit-email-template/images/eas-banner-circle.jpg" />
           </figure>
         </div>
         <div class="headerdesign vertical-center">
@@ -171,6 +178,7 @@ Next Tasks:
         <div class="field">
           <label class="label">Key Business Capabilities</label>
           <div class="control">
+            <!-- TODO :: Use purple variable -->
             <textarea class="textarea is-dark" id="benefits" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
             <p class="help is-hidden">
               Here we want to emphasize bulleted lists. Use either 1. 2. 3. for an ordered list or *-+ for an unordered list. If you want to see what else markdown can do checkout this link <a
@@ -265,22 +273,22 @@ Next Tasks:
               <ul>
                 <li class="tab is-active" onclick="openTab(event,'step1')"><a>
                     <figure class="image is-96x96">
-                      <img src="https://0400a64.netsolhost.com/samples/step1.png">
+                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step1.png">
                     </figure>
                   </a></li>
                 <li class="tab" onclick="openTab(event,'step2')"><a>
                     <figure class="image is-96x96">
-                      <img src="https://0400a64.netsolhost.com/samples/step2.png">
+                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step2.png">
                     </figure>
                   </a></li>
                 <li class="tab" onclick="openTab(event,'step3')"><a>
                     <figure class="image is-96x96">
-                      <img src="https://0400a64.netsolhost.com/samples/step3.png">
+                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step3.png">
                     </figure>
                   </a></li>
                 <li class="tab" onclick="openTab(event,'step4')"><a>
                     <figure class="image is-96x96">
-                      <img src="https://0400a64.netsolhost.com/samples/step4.png">
+                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step4.png">
                     </figure>
                   </a></li>
               </ul>
@@ -301,7 +309,7 @@ Next Tasks:
             </div>
             <div id="step2" class="content-tab" style="display:none">
               <p><span style="font-size: 20px; font-weight: bold;">#2</span> Generating the template is easy. There are four sections to populate.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/instructions/template-example.png">
+              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/template-example.png">
 
               <p>Follow the instructions below each input field.
                 <br /><br />
@@ -310,33 +318,33 @@ Next Tasks:
 
               <p>When ready click the <strong>Get My Email</strong> button. While there, you can download a zip file that
                 contains all the template images.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/instructions/template-buttons.png">
+              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/template-buttons.png">
             </div>
             <div id="step3" class="content-tab" style="display:none">
               <!-- Insert featherlight modal here -->
-              <p><span style="font-size: 20px; font-weight: bold;">#3</span> If this is your first time inserting HTML into an email, you will probably need to add a button to the quick access bar in Outlook.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/instructions/email-setup.png">
+              <p class="bottom-spacing"><span style="font-size: 20px; font-weight: bold;">#3</span> If this is your first time inserting HTML into an email, you will probably need to add a button to the quick access bar in Outlook >>
+                <a href="#" data-featherlight="https://vmsappsdev.varian.com/vit-email-template/images/instructions/email-setup.png">show me how</a></p>
 
-              <p>Open a new email and add a thoughtful Subject line. Then, attach the html file we generated, making sure to select <strong>'Insert as Text'</strong>.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/instructions/insert-email.png">
+              <p style="padding-top: 20px">Open a new email and add a thoughtful Subject line. Then, attach the html file we generated, making sure to select <strong>'Insert as Text'</strong>.</p>
+              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/insert-email.png">
 
               <p>Replace the four [***Image Placeholders***]. <br /> <span style="font-size:small;">Why are we doing this? By inserting the iamges manually, we ensure that people will not get an empty boxes where pictures were not downloaded from a
                   server.</span></p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/instructions/insert-picture.png">
+              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/insert-picture.png">
 
-              <P style="padding-bottom: 20px;">With the HTML and images incorporated, you are almost done.</P>
+              <P class="bottom-spacing">With the HTML and images incorporated, you are almost done.</P>
 
               <p>Double check your message formatting. Most likely you can improve the symmetry of the message by adding a few empty rows. Also, make sure to delete the [optional
                 text]
                 elements if they were unused.</p>
             </div>
             <div id="step4" class="content-tab" style="display:none">
-              <p style="padding-bottom: 20px;"><span style="font-size: 20px; font-weight: bold;">#4</span> Good Job! Your email should be looking pretty good by now✋</p>
-              <p style="padding-bottom: 20px;"> If you are ready to send, we suggest that you Save the email. Then go to the drafts folder where you can copy/paste that message to send a test to yourself and a few others. Continue copy/pasting the
+              <p class="bottom-spacing"><span style="font-size: 20px; font-weight: bold;">#4</span> Good Job! Your email should be looking pretty good by now✋</p>
+              <p class="bottom-spacing"> If you are ready to send, we suggest that you Save the email. Then go to the drafts folder where you can copy/paste that message to send a test to yourself and a few others. Continue copy/pasting the
                 message until you are finished testing. This way the original does not disappear.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/instructions/email-draft.png">
+              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/email-draft.png">
 
-              <p style="padding-bottom: 20px;">When ready to send out to the business, we suggest that you put everyone into the BCC: field, making sure to include
+              <p class="bottom-spacing">When ready to send out to the business, we suggest that you put everyone into the BCC: field, making sure to include
                 EAS.GoLive@sp16.varian.com so that the message will get catalogued and become visible on vMSnet!</p>
               <p style="padding-bottom: 20px;">Consider making the To: field an executive to emphasize the importance of what you have accomplished.</p>
             </div>
