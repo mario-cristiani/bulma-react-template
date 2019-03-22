@@ -246,7 +246,7 @@ const buildTemplate = (fieldValues) => {
 
       <!-- Visually Hidden Preheader Text : BEGIN -->
       <div style="display: none; font-size: 1px; line-height: 1px; max-height: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-family: sans-serif;">
-        ${fieldValues.subheader};
+        ${fieldValues.subheader}
       </div>
 
       <!-- This forces blank space after the carefully crafted subheader -->
@@ -327,7 +327,7 @@ const buildTemplate = (fieldValues) => {
                       <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; padding: 10px; text-align: left;" class="center-on-narrow">
                         <p style="padding: 5; text-align: left;">${fieldValues['project-details']}</p>
 
-                        <p style="padding: 5; text-align: left;">[Optional - Insert image here or delete.]</p>
+                        <p style="padding: 5; text-align: left;">[Optional - You can insert your own image here or delete this.]</p>
                       </td>
                     </tr>
                   </table>
@@ -349,7 +349,7 @@ const buildTemplate = (fieldValues) => {
 
         <tr>
           <td bgcolor="#ffffff" style="padding: 20px 20px 10px; font-family: sans-serif; font-size: 15px; line-height: 20px; color: #555555; text-align: center;">
-            <p style="padding: 5; text-align: left;">[Additional long form paragraph optional]</p>
+            <p style="padding: 5; text-align: left;">[This is not updated using the Email Accelerator. If you want to add an additional long form - full width - paragraph, replace this text. Else, delete this]</p>
 
             <p style="padding: 5; text-align: left;"><span style="color:#00A8E1; font-weight:bold;">Project Manager:</span> ${fieldValues['project-manager']} <span style="color:#00A8E1; font-weight:bold;">VIT Manager:</span> ${fieldValues['vit-manager']} <span style="color:#00A8E1; font-weight:bold;">Project Team:</span> ${fieldValues['project-team']} <span style="color:#00A8E1; font-weight:bold;">Business Sponsors:</span> ${fieldValues['business-sponsor']}</p>
           </td>
