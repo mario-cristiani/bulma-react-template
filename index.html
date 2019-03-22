@@ -16,11 +16,11 @@ Next Tasks:
 <html lang="en" dir="ltr">
 
 <head>
-  <meta charset="utf-8">
+  <meta charset="utf-8" />
   <title></title>
 
-  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css">
-  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.7.4/css/bulma.min.css" />
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous" />
 
   <script src="index.js"></script>
   <script src="template.js"></script>
@@ -38,22 +38,25 @@ Next Tasks:
       padding-bottom: 20px;
     }
 
+    .column {
+      margin: 40px 16px;
+    }
+
     .container {
       /* padding: 10px; */
-      margin: 0px;
+      margin: 0px auto;
+      max-width: 1280px;
+      padding: 24px;
     }
 
     .column-decoration {
       background-color: #c6f0ff;
       border-radius: 10px;
-      margin-left: 30px;
-      margin-top: 20px;
     }
 
     .column-gradient {
       background-image: linear-gradient(#fff, #d8d8d6);
       border-radius: 10px;
-      margin-top: 20px;
     }
 
     .description-text {
@@ -83,27 +86,29 @@ Next Tasks:
 </head>
 
 <body>
-
   <div id="closing-message" class="modal">
     <div class="modal-background"></div>
     <div class="modal-card">
       <header class="modal-card-head">
-        <p class="modal-card-title">All Done</p> <button class="delete" aria-label="close"></button>
+        <p class="modal-card-title">All Done</p>
+        <button class="delete" aria-label="close"></button>
       </header>
       <section class="modal-card-body">
-        <p>Good Job. Dont forget to include <strong>vit-eas-projects@sp13.varian.com</strong> in the bcc field!</p>
+        <p>
+          Good Job. Dont forget to include
+          <strong>vit-eas-projects@sp13.varian.com</strong> in the bcc field!
+        </p>
       </section>
-      <footer class="modal-card-foot">
-      </footer>
+      <footer class="modal-card-foot"></footer>
     </div>
   </div>
 
   <section class="hero is-black">
     <div class="hero-body">
-      <div class="container is fluid">
+      <div class="container">
         <div class="headerdesign">
           <figure class="image is-96x96">
-            <img class="is-rounded" src="https://vmsappsdev.varian.com/vit-email-template/eas-banner-circle.jpg">
+            <img class="is-rounded" src="https://vmsappsdev.varian.com/vit-email-template/eas-banner-circle.jpg" />
           </figure>
         </div>
         <div class="headerdesign vertical-center">
@@ -115,14 +120,13 @@ Next Tasks:
     </div>
   </section>
 
-  <section class="container is-fluid">
+  <section class="container">
     <div class="columns">
       <div class="column column-gradient">
-
         <div class="field">
           <label class="label">Subject</label>
           <div class="control">
-            <input class="input" id="subject" type="text" placeholder="Type the Subject directly into the email itself " disabled>
+            <input class="input" id="subject" type="text" placeholder="Type the Subject directly into the email itself " disabled />
           </div>
         </div>
 
@@ -132,10 +136,14 @@ Next Tasks:
             <span class="icon is-small is-left">
               <i class="fas fa-exclamation-triangle"></i>
             </span>
-            <input class="input" id="subheader" type="text" placeholder="Think of an important sentence just for the outlook inbox">
+            <input class="input" id="subheader" type="text" placeholder="Think of an important sentence just for the outlook inbox" />
           </div>
-          <p class="help is-success">We treat the subheader text with extra importance. It is hidden within your email and will only show up in the outlook inbox. We also force a lot of white space to ensure what you type here is the only thing that
-            shows.</p>
+          <p class="help is-success">
+            We treat the subheader text with extra importance. It is hidden
+            within your email and will only show up in the outlook inbox. We
+            also force a lot of white space to ensure what you type here is
+            the only thing that shows.
+          </p>
         </div>
 
         <div class="field">
@@ -165,7 +173,7 @@ Next Tasks:
             <span class="icon is-small is-left">
               <i class="fas fa-user-circle"></i>
             </span>
-            <input class="input" id="project-manager" type="text" placeholder="Give a shout out to the Manager">
+            <input class="input" id="project-manager" type="text" placeholder="Give a shout out to the Manager" />
           </div>
         </div>
 
@@ -175,10 +183,9 @@ Next Tasks:
             <span class="icon is-small is-left">
               <i class="fas fa-user-circle"></i>
             </span>
-            <input class="input" id="vit-manager" type="text" placeholder="Don't forget VIT...">
+            <input class="input" id="vit-manager" type="text" placeholder="Don't forget VIT..." />
           </div>
         </div>
-
 
         <div class="field">
           <label class="label">Project Team</label>
@@ -186,10 +193,9 @@ Next Tasks:
             <span class="icon is-small is-left">
               <i class="fas fa-users"></i>
             </span>
-            <input class="input" id="project-team" type="text" placeholder="Thank your team members">
+            <input class="input" id="project-team" type="text" placeholder="Thank your team members" />
           </div>
         </div>
-
 
         <div class="field">
           <label class="label">Business Sponsor</label>
@@ -197,7 +203,7 @@ Next Tasks:
             <span class="icon is-small is-left">
               <i class="fas fa-user-circle"></i>
             </span>
-            <input class="input" id="business-sponsor" type="text" placeholder="Include the business sponsor(s)">
+            <input class="input" id="business-sponsor" type="text" placeholder="Include the business sponsor(s)" />
           </div>
         </div>
 
