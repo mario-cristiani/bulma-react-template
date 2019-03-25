@@ -98,23 +98,23 @@ const buildTemplate = (fieldValues) => {
         list-style-type: none;
       }
 
-      ul.pin>li:before {
-        content: "📌";
-        color: red;
-        position: absolute;
-        left: -2em;
-      }
+      // ul.pin>li:before {
+      //   content: "📌";
+      //   color: red;
+      //   position: absolute;
+      //   left: -2em;
+      // }
 
       ul.check {
         list-style-type: none;
       }
 
-      ul.check>li:before {
-        content: "✔";
-        color: green;
-        position: absolute;
-        left: -2em;
-      }
+      // ul.check>li:before {
+      //   content: "✔";
+      //   color: green;
+      //   position: absolute;
+      //   left: -2em;
+      // }
 
       /* What it does: A work-around for email clients meddling in triggered links. */
       *[x-apple-data-detectors],
@@ -268,10 +268,10 @@ const buildTemplate = (fieldValues) => {
               <table role="presentation" cellspacing="0" cellpadding="0" border="0" width="100%">
                 <tr>
                   <td style="text-align: left; color: white; padding-left: 10px; height: 100px;">
-                    [Insert varian-logo-110px]
+                    [*** insert varian-logo-110px ***]
                   </td>
                   <td style="text-align: right; color: white; padding-right: 20px; height: 100px;">
-                    [Insert varian-ellipses-80px]
+                    [*** insert varian-ellipses-80px ***]
                   </td>
                 </tr>
               </table>
@@ -290,7 +290,7 @@ const buildTemplate = (fieldValues) => {
       <table role="presentation" cellspacing="0" cellpadding="0" border="0" align="center" width="1000" style="margin: auto;" class="email-container">
         <tr>
           <td bgcolor="#ffffff" align="center" style="padding-top: 20px;">
-            [Insert eas-banner-1000px]
+            [*** insert eas-banner-1000px ***]
           </td>
         </tr>
 
@@ -304,14 +304,12 @@ const buildTemplate = (fieldValues) => {
                   <table role="presentation" align="center" border="0" cellpadding="0" cellspacing="0" width="100%">
                     <tr>
                       <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px;  padding: 0 10px 30px; border-top: 5px solid #682E86;">
-                        <ul class="check">
                           ${fieldValues.benefits}
-                        </ul>
                       </td>
                     </tr>
                     <tr>
-                      <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; padding: 0 10px 30px; border-top: 5px solid #FFBC3E;">
-                        <ul class="pin">
+                      <td dir="ltr" valign="top" style="font-family: sans-serif; font-size: 15px; line-height: 20px; padding: 0 10px 10px; border-top: 5px solid #FFBC3E;">
+                        <ul>
                           ${fieldValues.kpi}
                         </ul>
                       </td>
@@ -372,7 +370,7 @@ const buildTemplate = (fieldValues) => {
                   <td style="text-align: center; height: 100px; font-family: sans-serif; font-size: 20px; line-height: 30px;">
                     Technology
                     &nbsp;
-                    <span style="font-size: 16px;">[Insert varian-amp-24px]</span>
+                    <span style="font-size: 16px;">[*** insert varian-amp-24px ***]</span>
                     &nbsp;
                     People
                   </td>

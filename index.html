@@ -32,8 +32,24 @@ Next Tasks:
   <script src="//cdn.rawgit.com/noelboss/featherlight/1.7.13/release/featherlight.min.js" type="text/javascript" charset="utf-8"></script>
 
   <style>
-    body {
-      padding-bottom: 50px;
+    input::-webkit-input-placeholder {
+      color: #9e9e9e !important;
+    }
+
+    input::-ms-input-placeholder {
+      color: #9e9e9e !important;
+    }
+
+    textarea::-webkit-input-placeholder {
+      color: #9e9e9e !important;
+    }
+
+    textarea::-ms-input-placeholder {
+      color: #9e9e9e !important;
+    }
+
+    li {
+      margin-left: 20px;
     }
 
     .hidden {
@@ -51,8 +67,12 @@ Next Tasks:
     .container {
       /* padding: 10px; */
       margin: 0px auto;
-      max-width: 1280px;
-      padding: 24px;
+      /* max-width: 1280px; */
+      padding: 0px;
+    }
+
+    .section {
+      padding-top: 0px;
     }
 
     .column-decoration {
@@ -74,20 +94,12 @@ Next Tasks:
     }
 
     .content-tab p {
-      padding-bottom: 0px
-    }
-
-    .bottom-spacing {
       padding-bottom: 20px;
     }
 
     .content-tab img {
-      border-radius: 20px;
-      padding: 10px;
-    }
-
-    li {
-      margin-left: 20px;
+      border-radius: 30px;
+      padding: 20px;
     }
 
     .headerdesign {
@@ -140,218 +152,220 @@ Next Tasks:
     </div>
   </section>
 
-  <section class="container">
-    <div class="columns">
-      <div class="column column-gradient">
-        <div class="field">
-          <label class="label">Subject</label>
-          <div class="control">
-            <input class="input" id="subject" type="text" placeholder="Type the Subject directly into the email itself " disabled />
+  <section class="section">
+    <div class="container">
+      <div class="columns">
+        <div class="column column-gradient">
+          <div class="field">
+            <label class="label">Subject</label>
+            <div class="control">
+              <input class="input" id="subject" type="text" placeholder="Type the Subject directly into the email itself " disabled />
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Subheader</label>
+            <div class="control has-icons-left">
+              <span class="icon is-small is-left">
+                <i class="fas fa-exclamation-triangle"></i>
+              </span>
+              <input class="input" id="subheader" type="text" placeholder="Think of an important sentence just for the outlook inbox" />
+              <p class="help is-hidden">
+                Use the subheader text to control what is seen in the Outlook Inbox. We
+                force white space to ensure that people will only see the Subject line and subheader. Make it count!
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Project Details</label>
+            <div class="control">
+              <textarea class="textarea is-success" id="project-details" placeholder="Tell a story that includes: project overview, context for the business user, business capabilities and any issues to be resolved." rows="15"></textarea>
+              <p class="help is-hidden">
+                This is the main body of the communication. Here you should include one or more paragraphs. This field interprets markdown. A simple example of this is empty lines between paragraphs.
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Key Business Capabilities</label>
+            <div class="control">
+              <!-- TODO :: Use purple variable -->
+              <textarea class="textarea is-dark" id="benefits" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
+              <p class="help is-hidden">
+                Here we want to emphasize bulleted lists. Use either 1. 2. 3. for an ordered list or *-+ for an unordered list.
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">KPIs/Benefits</label>
+            <div class="control">
+              <textarea class="textarea is-warning" id="kpi" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
+              <p class="help is-hidden">
+                Here we want to emphasize bulleted lists. Use either 1. 2. 3. for an ordered list or *-+ for an unordered list.
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Project Manager(s)</label>
+            <div class="control has-icons-left">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user-circle"></i>
+              </span>
+              <input class="input is-info" id="project-manager" type="text" placeholder="Give a shout out to the Manager" />
+              <p class="help is-hidden">
+                Add one or more names separated by commas.
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">VIT Manager(s)</label>
+            <div class="control has-icons-left">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user-circle"></i>
+              </span>
+              <input class="input is-info" id="vit-manager" type="text" placeholder="Don't forget VIT..." />
+              <p class="help is-hidden">
+                Add one or more names separated by commas.
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Project Team(s)</label>
+            <div class="control has-icons-left">
+              <span class="icon is-small is-left">
+                <i class="fas fa-users"></i>
+              </span>
+              <input class="input is-info" id="project-team" type="text" placeholder="Thank your team members" />
+              <p class="help is-hidden">
+                Add one or more names separated by commas.
+              </p>
+            </div>
+          </div>
+
+          <div class="field">
+            <label class="label">Business Sponsor(s)</label>
+            <div class="control has-icons-left">
+              <span class="icon is-small is-left">
+                <i class="fas fa-user-circle"></i>
+              </span>
+              <input class="input is-info" id="business-sponsor" type="text" placeholder="Include the business sponsor(s)" />
+              <p class="help is-hidden">
+                Add one or more names separated by commas.
+              </p>
+            </div>
+          </div>
+
+          <div class="field is-grouped">
+            <div class="control">
+              <button class="button is-link" id="submit">Get My Email</button>
+            </div>
+            <div class="control">
+              <a class="button is-link hidden" id="download">Download Now</a>
+            </div>
+            <div class="control">
+              <a href="https://vmsappsdev.varian.com/vit-email-template/vit-template-images.zip" download="vit_template_images.zip">Download Images</a>
+            </div>
           </div>
         </div>
 
-        <div class="field">
-          <label class="label">Subheader</label>
-          <div class="control has-icons-left">
-            <span class="icon is-small is-left">
-              <i class="fas fa-exclamation-triangle"></i>
-            </span>
-            <input class="input" id="subheader" type="text" placeholder="Think of an important sentence just for the outlook inbox" />
-            <p class="help is-hidden">
-              Use the subheader text to control what is seen in the Outlook Inbox. We
-              force white space to ensure that people will only see the Subject line and subheader. Make it count!
-            </p>
-          </div>
-        </div>
+        <div class="column column-decoration">
+          <div class="description-text">
+            <p><span style="font-size: 24px; font-weight: bold;">W</span>elcome, to the “EAS Project Communication Accelerator 🚀”. Follow the steps below when you are ready to get started. </p>
 
-        <div class="field">
-          <label class="label">Project Details</label>
-          <div class="control">
-            <textarea class="textarea is-success" id="project-details" placeholder="Tell a story that includes: project overview, context for the business user, business capabilities and any issues to be resolved." rows="15"></textarea>
-            <p class="help is-hidden">
-              This is the main body of the communication. Here you should include one or more paragraphs. This field interprets markdown. A simple example of this is empty lines between paragraphs. If you want to see what else markdown can do
-              checkout this link <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines">Markdown Cheatsheet</a>
-            </p>
-          </div>
-        </div>
+            <div class="hero-foot">
+              <!-- is-boxed is-fullwidth is-large -->
+              <nav class="tabs is-centered is-small">
+                <ul>
+                  <li class="tab is-active" onclick="openTab(event,'step1')"><a>
+                      <figure class="image is-96x96">
+                        <img src="https://vmsappsdev.varian.com/vit-email-template/images/step1.png">
+                      </figure>
+                    </a></li>
+                  <li class="tab" onclick="openTab(event,'step2')"><a>
+                      <figure class="image is-96x96">
+                        <img src="https://vmsappsdev.varian.com/vit-email-template/images/step2.png">
+                      </figure>
+                    </a></li>
+                  <li class="tab" onclick="openTab(event,'step3')"><a>
+                      <figure class="image is-96x96">
+                        <img src="https://vmsappsdev.varian.com/vit-email-template/images/step3.png">
+                      </figure>
+                    </a></li>
+                  <li class="tab" onclick="openTab(event,'step4')"><a>
+                      <figure class="image is-96x96">
+                        <img src="https://vmsappsdev.varian.com/vit-email-template/images/step4.png">
+                      </figure>
+                    </a></li>
+                </ul>
+              </nav>
+            </div>
 
-        <div class="field">
-          <label class="label">Key Business Capabilities</label>
-          <div class="control">
-            <!-- TODO :: Use purple variable -->
-            <textarea class="textarea is-dark" id="benefits" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
-            <p class="help is-hidden">
-              Here we want to emphasize bulleted lists. Use either 1. 2. 3. for an ordered list or *-+ for an unordered list. If you want to see what else markdown can do checkout this link <a
-                href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines">Markdown Cheatsheet</a>.
-            </p>
-          </div>
-        </div>
+            <div class="section description-text">
+              <div id="step1" class="content-tab">
+                <p><span style="font-size: 20px; font-weight: bold;">#1</span> Take a few minutes to think about what the project means in the eyes of the business and our users.
+                  <br /><br />
+                  Then create a simple story with the “Five
+                  Ws (Who, What, When, Where, Why) and How” in mind. Here are some hints:</p>
+                <ol>
+                  <li>Is this project part of a larger program of strategic initiative?</li>
+                  <li>What are the pain points to be resolved?</li>
+                  <li>What is next? </li>
+                </ol>
+              </div>
+              <div id="step2" class="content-tab" style="display:none">
+                <p><span style="font-size: 20px; font-weight: bold;">#2</span> Generating the template is easy. There are four sections to populate.</p>
+                <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/template-example.png">
 
-        <div class="field">
-          <label class="label">KPIs/Benefits</label>
-          <div class="control">
-            <textarea class="textarea is-warning" id="kpi" placeholder="Make this a bulleted list using markdown" rows="6"></textarea>
-            <p class="help is-hidden">
-              Here we want to emphasize bulleted lists. Use either 1. 2. 3. for an ordered list or *-+ for an unordered list. If you want to see what else markdown can do checkout this link <a
-                href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines">Markdown Cheatsheet</a>.
-            </p>
-          </div>
-        </div>
+                <p>Follow the instructions below each input field.
+                  <br /><br />
+                  Note that the Project Details, Key Business Capabilities, and KPI/Benefits fields can interpret markdown so that you can style the text you are importing. If you want to see what else
+                  markdown can do checkout this link <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lists" target="_blank">Markdown Cheatsheet</a>.</p>
 
-        <div class="field">
-          <label class="label">Project Manager(s)</label>
-          <div class="control has-icons-left">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user-circle"></i>
-            </span>
-            <input class="input is-info" id="project-manager" type="text" placeholder="Give a shout out to the Manager" />
-            <p class="help is-hidden">
-              Add one or more names separated by commas.
-            </p>
-          </div>
-        </div>
+                <p>When ready click the <strong>Get My Email</strong> button. While there, you can download a zip file that
+                  contains all the template images.</p>
+                <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/template-buttons.png">
+              </div>
+              <div id="step3" class="content-tab" style="display:none">
+                <!-- Insert featherlight modal here -->
+                <p><span style="font-size: 20px; font-weight: bold;">#3</span> If this is your first time inserting HTML into an email, you will probably need to add a button to the quick access bar in Outlook >>
+                  <a href="#" data-featherlight="https://vmsappsdev.varian.com/vit-email-template/images/instructions/email-setup.png">show me how</a></p>
 
-        <div class="field">
-          <label class="label">VIT Manager(s)</label>
-          <div class="control has-icons-left">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user-circle"></i>
-            </span>
-            <input class="input is-info" id="vit-manager" type="text" placeholder="Don't forget VIT..." />
-            <p class="help is-hidden">
-              Add one or more names separated by commas.
-            </p>
-          </div>
-        </div>
+                <p>Open a new email and add a thoughtful Subject line. Then, attach the html file we generated, making sure to select <strong>'Insert as Text'</strong>.</p>
+                <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/insert-email.png">
 
-        <div class="field">
-          <label class="label">Project Team(s)</label>
-          <div class="control has-icons-left">
-            <span class="icon is-small is-left">
-              <i class="fas fa-users"></i>
-            </span>
-            <input class="input is-info" id="project-team" type="text" placeholder="Thank your team members" />
-            <p class="help is-hidden">
-              Add one or more names separated by commas.
-            </p>
-          </div>
-        </div>
+                <p>Replace the four [***Image Placeholders***]. <br /> <span style="font-size:small;">Why are we doing this? By inserting the images manually, we ensure that people will not get empty boxes where pictures were not downloaded from a
+                    server.</span></p>
+                <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/insert-picture.png">
 
-        <div class="field">
-          <label class="label">Business Sponsor(s)</label>
-          <div class="control has-icons-left">
-            <span class="icon is-small is-left">
-              <i class="fas fa-user-circle"></i>
-            </span>
-            <input class="input is-info" id="business-sponsor" type="text" placeholder="Include the business sponsor(s)" />
-            <p class="help is-hidden">
-              Add one or more names separated by commas.
-            </p>
-          </div>
-        </div>
+                <p>With the HTML and images incorporated, you are almost done.</p>
 
-        <div class="field is-grouped">
-          <div class="control">
-            <button class="button is-link" id="submit">Get My Email</button>
-          </div>
-          <div class="control">
-            <a class="button is-link hidden" id="download">Download Now</a>
-          </div>
-          <div class="control">
-            <a href="https://vmsappsdev.varian.com/vit-email-template/vit-template-images.zip" download="vit_template_images.zip">Download Images</a>
+                <p>Double check your message formatting. Most likely you can improve the symmetry of the message by adding a few empty rows. Also, make sure to delete the [optional
+                  text]
+                  elements if they were unused. If, the bulleted lists are not behaving, use the ruler to adjust where they start.</p>
+                <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/bullet-adjustment.png">
+
+              </div>
+              <div id="step4" class="content-tab" style="display:none">
+                <p><span style="font-size: 20px; font-weight: bold;">#4</span> Good Job! Your email should be looking pretty good by now✋</p>
+                <p> Before you send, we suggest that you save the email to the Drafts folder. Then, while inside Drafts, you can copy/paste the message to send a test to yourself and a few others; this way the original does not disappear.
+                </p>
+                <p>Continue copy/pasting the
+                  message until you are finished testing. </p>
+                <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/email-draft.png">
+
+                <p>With all testing complete, consider making the To: field an executive to emphasize the importance of what you have accomplished. Put your stakeholders, including yourself, into the BCC: field, making sure to include
+                  EAS.GoLive@sp16.varian.com so that the message will get catalogued and become visible on vMSnet!</p>
+                <p></p>
+              </div>
+            </div>
           </div>
         </div>
       </div>
-
-      <div class="column column-decoration">
-        <div class="description-text">
-          <p><span style="font-size: 24px; font-weight: bold;">W</span>elcome, to the “EAS Project Communication Accelerator 🚀”. Follow the steps below when you are ready to get started. </p>
-
-          <div class="hero-foot">
-            <!-- is-boxed is-fullwidth is-large -->
-            <nav class="tabs is-centered is-small">
-              <ul>
-                <li class="tab is-active" onclick="openTab(event,'step1')"><a>
-                    <figure class="image is-96x96">
-                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step1.png">
-                    </figure>
-                  </a></li>
-                <li class="tab" onclick="openTab(event,'step2')"><a>
-                    <figure class="image is-96x96">
-                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step2.png">
-                    </figure>
-                  </a></li>
-                <li class="tab" onclick="openTab(event,'step3')"><a>
-                    <figure class="image is-96x96">
-                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step3.png">
-                    </figure>
-                  </a></li>
-                <li class="tab" onclick="openTab(event,'step4')"><a>
-                    <figure class="image is-96x96">
-                      <img src="https://vmsappsdev.varian.com/vit-email-template/images/step4.png">
-                    </figure>
-                  </a></li>
-              </ul>
-            </nav>
-          </div>
-
-          <div class="section description-text">
-            <div id="step1" class="content-tab">
-              <p><span style="font-size: 20px; font-weight: bold;">#1</span> Take a few minutes to think about what the project means in the eyes of the business and our users.
-                <br /><br />
-                Then create a simple story with the “Five
-                Ws (Who, What, When, Where, Why) and How” in mind. Here are some hints:</p>
-              <ol>
-                <li>Is this project part of a larger program of strategic initiative?</li>
-                <li>What are the pain points to be resolved?</li>
-                <li>What is next? </li>
-              </ol>
-            </div>
-            <div id="step2" class="content-tab" style="display:none">
-              <p><span style="font-size: 20px; font-weight: bold;">#2</span> Generating the template is easy. There are four sections to populate.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/template-example.png">
-
-              <p>Follow the instructions below each input field.
-                <br /><br />
-                Note that the Project Details, Key Business Capabilities, and KPI/Benefits fields can interpret markdown so that you can style the text you are importing. If you want to see what else
-                markdown can do checkout this link <a href="https://github.com/adam-p/markdown-here/wiki/Markdown-Cheatsheet#lines">Markdown Cheatsheet</a>.<br /><br /></p>
-
-              <p>When ready click the <strong>Get My Email</strong> button. While there, you can download a zip file that
-                contains all the template images.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/template-buttons.png">
-            </div>
-            <div id="step3" class="content-tab" style="display:none">
-              <!-- Insert featherlight modal here -->
-              <p class="bottom-spacing"><span style="font-size: 20px; font-weight: bold;">#3</span> If this is your first time inserting HTML into an email, you will probably need to add a button to the quick access bar in Outlook >>
-                <a href="#" data-featherlight="https://vmsappsdev.varian.com/vit-email-template/images/instructions/email-setup.png">show me how</a></p>
-
-              <p style="padding-top: 20px">Open a new email and add a thoughtful Subject line. Then, attach the html file we generated, making sure to select <strong>'Insert as Text'</strong>.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/insert-email.png">
-
-              <p>Replace the four [***Image Placeholders***]. <br /> <span style="font-size:small;">Why are we doing this? By inserting the iamges manually, we ensure that people will not get an empty boxes where pictures were not downloaded from a
-                  server.</span></p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/insert-picture.png">
-
-              <P class="bottom-spacing">With the HTML and images incorporated, you are almost done.</P>
-
-              <p>Double check your message formatting. Most likely you can improve the symmetry of the message by adding a few empty rows. Also, make sure to delete the [optional
-                text]
-                elements if they were unused.</p>
-            </div>
-            <div id="step4" class="content-tab" style="display:none">
-              <p class="bottom-spacing"><span style="font-size: 20px; font-weight: bold;">#4</span> Good Job! Your email should be looking pretty good by now✋</p>
-              <p class="bottom-spacing"> If you are ready to send, we suggest that you Save the email. Then go to the drafts folder where you can copy/paste that message to send a test to yourself and a few others. Continue copy/pasting the
-                message until you are finished testing. This way the original does not disappear.</p>
-              <img src="https://vmsappsdev.varian.com/vit-email-template/images/instructions/email-draft.png">
-
-              <p class="bottom-spacing">When ready to send out to the business, we suggest that you put everyone into the BCC: field, making sure to include
-                EAS.GoLive@sp16.varian.com so that the message will get catalogued and become visible on vMSnet!</p>
-              <p style="padding-bottom: 20px;">Consider making the To: field an executive to emphasize the importance of what you have accomplished.</p>
-            </div>
-          </div>
-        </div>
-      </div>
-
     </div>
   </section>
 
